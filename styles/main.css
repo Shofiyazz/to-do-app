@@ -50,8 +50,6 @@ header {
 
 }
 
-/* Profile info ga dibuat 
-karna h2 dan p udah default flex direction column  */
 .profile-info h2 {
     font-size: 18px;
 }
@@ -236,10 +234,6 @@ form label {
     border-radius: 4px;
     padding: 6px;
 }
-/* 
-.overdue-card .card-header h2 {
-    background-color: var(--todo-color);
-} */
 
 .todo-card .card-header h2 {
     background-color: var(--todo-color);
@@ -247,6 +241,13 @@ form label {
 
 .done-card .card-header h2 {
     background-color: var(--done-color);
+}
+
+.task-date {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-style: italic;
+    font-weight: 500;
 }
 
 .task-left {
@@ -260,6 +261,11 @@ form label {
 
 .task-item {
     display: flex;
+    flex-direction: column;
+}
+
+.task-content {
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -267,10 +273,21 @@ form label {
 .priority-badge {
     font-size: 10px;
     color: white;
-    background-color: var(--pink);
     padding: 2px;
     margin: 0.5px;
     border-radius: 4px;
+}
+
+.low-priority {
+    background-color: var(--blue);
+}
+
+.medium-priority {
+    background-color: var(--secondary-color);
+}
+
+.high-priority {
+    background-color: var(--pink);
 }
 
 input[type="checkbox"]{
@@ -281,6 +298,7 @@ input[type="checkbox"]{
     display: flex;
     align-items: center;
     gap: 8px;
+    margin-left: 120px;
 }
 
 .delete-btn {

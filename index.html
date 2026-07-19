@@ -6,6 +6,7 @@
     <title>To Do App</title>
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="./js/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -35,8 +36,7 @@
                 </span>
 
                 <div class="date-time">
-                <h4>Day, DayNumber, Month, Year</h4>
-                <p>Time</p>
+                    <h4 id="current-time"></h4>
                 </div> 
             </div>
 
@@ -67,7 +67,7 @@
                             <button type="button" class="priority-btn-high">High</button>
                         </div>
 
-                        <button class="submit-btn">
+                        <button class="submit-btn" id="submitBtn">
                            + Submit
                         </button>
                     </div>
@@ -76,78 +76,28 @@
         </section>
 
         <section class="task-list">
-            <!-- <section class="task-card overdue-card">
-                <div class="card-header"> 
-                    <h2>OVERDUE</h2> 
-                    <span class="task-left">4</span> 
-                </div>
-
-                <article class="task-item">
-                    <label>
-                        <input type="checkbox">
-                        Task1
-                    </label>
-                    
-                    <span class="priority-badge">High</span>
-                </article>
-
-                <button class="delete-section">
-                    <span class="material-symbols-outlined">
-                    delete
-                    </span>
-                </button>
-            </section> -->
-            
             <section class="task-card todo-card">
                 <div class="card-header"> 
                     <h2>TO DO</h2> 
-                    <span class="task-left">4</span> 
+                    <span class="task-left" id="todo-count">0</span> 
                 </div>
 
-                <article class="task-item">
-                    <label>
-                        <input type="checkbox">
-                        Task2
-                    </label>
-
-                    <div class="task-right">
-                        <span class="priority-badge">High</span>
-
-                        <button class="delete-btn">
-                            <span class="material-symbols-outlined">
-                                delete
-                            </span>
-                        </button>
-                    </div>                      
-                </article>
+                <div class="task-item" id="todo-tasks">
+                </div>
             </section>
 
             <section class="task-card done-card">
                 <div class="card-header"> 
                     <h2>DONE</h2> 
-                    <span class="task-left">4</span> 
+                    <span class="task-left" id="done-count">0</span> 
                 </div>
 
-                <article class="task-item">
-                    <label>
-                        <input type="checkbox">
-                        Task3
-                    </label>
-
-                    <div class="task-right">
-                        <span class="priority-badge">High</span>
-
-                        <button class="delete-btn">
-                            <span class="material-symbols-outlined">
-                                delete
-                            </span>
-                        </button>
-                    </div>   
-                </article>
+                <div class="task-item" id="done-tasks">
+                </div>
             </section>
         </section>
 
-        <button class="delete-global">
+        <button class="delete-global" id="delete-all">
             <span class="material-symbols-outlined">
             delete
             </span>
